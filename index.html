@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>RESPONSIVE PERSONAL PORTFOLIO WEBSITE </title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!--body-->
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">ABOUT</a>
+
+            </nav>
+        </header>
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hello,It's Me</h3>
+                <h1>Abhinash Sah</h1>
+                <h3>And I am an AI Engineer and Full-Stack Developer<span class="multiple-text"></span></h3>
+                <div class="social-media">
+                    <a href="https://github.com/Abhinash-Sah"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.instagram.com/abh1naaash/"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://www.linkedin.com/in/abhinash-sah-2a390a328/"><i class='bx bxl-linkedin-square' ></i></a>
+                </div>
+            </div>
+            <div class="home-img">
+               <img src="Abhi.png" alt="Abhi Image">
+
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about-img">
+           <img src="bat.png" alt="Abhi Image">
+            </div>
+            <div class="about-content">
+                <h2 class="heading">About<span>Me</span></h2>
+                <h3>AI Engineer | Full-Stack Developer | Content Creator</h3>
+                <p>I am an AI Engineer and Full-Stack Developer with strong expertise in designing, developing, and deploying intelligent and scalable software systems. My core programming languages include Python and Java, which I use extensively for backend development, machine learning applications, and system architecture.
+As a Full-Stack Developer, I work across the entire development lifecycle — from frontend UI/UX design to backend logic and database management. On the frontend, I work with HTML, CSS, JavaScript, and modern frameworks like React to build responsive and user-friendly interfaces. On the backend, I develop robust APIs and server-side applications using Node.js, Java (Spring Boot), and Python (Django/Flask/FastAPI).
+In AI and Machine Learning, I work with libraries and tools such as TensorFlow, PyTorch, Scikit-learn, Pandas, and NumPy to build intelligent models, data pipelines, and automation systems. I focus on integrating AI solutions into real-world applications to create impactful digital products.
+I also have experience with:
+Databases: MySQL, PostgreSQL, MongoDB
+Version Control: Git & GitHub
+Cloud & Deployment: Docker, REST APIs, basic cloud services
+Authentication & Security: JWT, OAuth
+Mobile & API Integration
+System Design & Scalability Concepts
+Beyond development, I am a YouTube content creator, where I produce tech-focused videos on AI, programming, software development, and productivity. I enjoy sharing knowledge, breaking down complex concepts, and helping aspiring developers grow in the tech industry.
+I am passionate about continuous learning, problem-solving, and building intelligent, scalable, and user-centered digital solutions.
+                      
+                 <a href="#"class="btn">Thank You</a>   
+      
+        
+            
+        
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Copyright &copy; 2026 by Abhinash | All Rights Reserved.</p>
+            </div>
+            <div class="footer-iconTop">
+                <a href="#home"><i class='bx bx-up-arrow-alt' ></i></a>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="script.js"></script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzFPVGxI-75Ilkm2z_EMuI9ubPlp8-7dQmMzzdPiIunLPPzj3bcY1ohMdT_DfZ3zPwhTA/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg=document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML="Message sent successfully"
+                    setTimeout(function(){
+                        msg.innerHTML=""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+        
+    </body>
+</html>
